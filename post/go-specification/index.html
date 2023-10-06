@@ -343,7 +343,7 @@ Go 对于任何字母类别 Lu, Ll, Lt, Lm 或 Lo 中的所有字符都视为是
 <span class="line"><span style="color:#babed8">octal_digit   = &quot;0&quot; … &quot;7&quot; .</span></span>
 <span class="line"><span style="color:#babed8">hex_digit     = &quot;0&quot; … &quot;9&quot; | &quot;A&quot; … &quot;F&quot; | &quot;a&quot; … &quot;f&quot; .</span></span></code></pre>
 <p><em>所谓的“下划线字符 _ (U+005F) 被视为一个小写字母。”的说法只适用于源代码表示场合；</em><br/>
-<em>在Go语言运行中， ’_’ 和 ‘\u005F’ 都不是小写字母；</em><br/>
+<em>在Go语言运行时中， ’_’ 和 ‘\u005F’ 都不是小写字母；</em><br/>
 <em>unicode.IsLower(’_’) 和 unicode.IsLower(‘\u005F’) 的值都是 false 。</em></p>
 <h2 id="lexical-elements-词法单元">Lexical elements 词法单元</h2>
 <h3 id="comments-注释">Comments 注释</h3>
