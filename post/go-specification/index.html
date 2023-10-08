@@ -796,33 +796,33 @@ Go 程序可以使用以下两个规则来省略大部分分号：</p>
 <p>有布尔常量、 Unicode 字符常量、整型常量、浮点常量、复数常量和字符串常量。<br/>
 Unicode 字符常量、整数常量、浮点常量和复数常量统称为数字常量。</p>
 <blockquote>
-<p>A constant value is represented by a rune, integer, floating-point, imaginary, or string literal, an identifier denoting a constant, a constant expression, a conversion with a result that is a constant, or the result value of some built-in functions such as unsafe.Sizeof applied to certain values, cap or len applied to some expressions, real and imag applied to a complex constant and complex applied to numeric constants. The boolean truth values are represented by the predeclared constants true and false. The predeclared identifier iota denotes an integer constant.</p>
+<p>A constant value is represented by a <a href="#rune-literals-unicode-%E5%AD%97%E7%AC%A6%E5%AD%97%E9%9D%A2%E9%87%8F">rune</a>, <a href="#integer-literals-%E6%95%B4%E6%95%B0%E5%AD%97%E9%9D%A2%E9%87%8F">integer</a>, <a href="#floating-point-literals-%E6%B5%AE%E7%82%B9%E5%AD%97%E9%9D%A2%E9%87%8F">floating-point</a>, <a href="#imaginary-literals-%E8%99%9A%E6%95%B0%E5%AD%97%E9%9D%A2%E9%87%8F">imaginary</a>, or <a href="#string-literals-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AD%97%E9%9D%A2%E9%87%8F">string</a> literal, an identifier denoting a constant, a <a href="#constant-expressions-%E5%B8%B8%E9%87%8F%E8%A1%A8%E8%BE%BE%E5%BC%8F">constant expression</a>, a <a href="#conversions-%E8%BD%AC%E6%8D%A2">conversion</a> with a result that is a constant, or the result value of some built-in functions such as unsafe.Sizeof applied to <a href="#package-unsafe-unsafe%E5%8C%85">certain values</a>, cap or len applied to <a href="#length-and-capacity-%E9%95%BF%E5%BA%A6%E5%92%8C%E5%AE%B9%E9%87%8F">some expressions</a>, real and imag applied to a complex constant and complex applied to numeric constants. The boolean truth values are represented by the predeclared constants true and false. The predeclared identifier iota denotes an integer constant.</p>
 </blockquote>
 <p>常量的值由 Unicode 字符、整数、浮点、虚数或字符串字面量、表示常量的标识符、常量表达式、结果为常量的转换或某些内置函数如 <code>unsafe.Sizeof</code> 作用于特定的值、 <code>cap</code> 和 <code>len</code> 作用于某些表达式、 <code>real</code> 和 <code>imag</code> 作用于复数常量和 <code>complex</code> 作用于数字常量的返回值来表示。<br/>
 布尔真值由预声明的常量 <code>true</code> 和 <code>false</code> 来表示。<br/>
 预声明的标识符 <code>iota</code> 表示整型常量。</p>
 <blockquote>
-<p>In general, complex constants are a form of constant expression and are discussed in that section.</p>
+<p>In general, complex constants are a form of <a href="#constant-expressions-%E5%B8%B8%E9%87%8F%E8%A1%A8%E8%BE%BE%E5%BC%8F">constant expression</a> and are discussed in that section.</p>
 </blockquote>
 <p>通常，复数常量是常量表达式的一种形式，将在常量表达式章节中讨论。</p>
 <blockquote>
 <p>Numeric constants represent exact values of arbitrary precision and do not overflow. Consequently, there are no constants denoting the IEEE-754 negative zero, infinity, and not-a-number values.</p>
 </blockquote>
 <p>数字常量表示任意精度的精确值且不会溢出。<br/>
-因此，没有常量来表示 IEEE-754标准中的 负零、无穷大和非数字值。</p>
+因此，没有常量来表示 IEEE-754 标准中的 负零、无穷大和非数字值。</p>
 <blockquote>
-<p>Constants may be typed or untyped. Literal constants, true, false, iota, and certain constant expressions containing only untyped constant operands are untyped.</p>
+<p>Constants may be <a href="#types-%E7%B1%BB%E5%9E%8B">typed</a> or untyped. Literal constants, true, false, iota, and certain <a href="#constant-expressions-%E5%B8%B8%E9%87%8F%E8%A1%A8%E8%BE%BE%E5%BC%8F">constant expression</a> containing only untyped constant operands are untyped.</p>
 </blockquote>
 <p>常量可以是有类型的，也可以是无类型的。<br/>
 字面量常量， true, false, iota 以及只包含无类型常量操作数的特定的常量表达式是无类型的。</p>
 <blockquote>
-<p>A constant may be given a type explicitly by a constant declaration or conversion, or implicitly when used in a variable declaration or an assignment statement or as an operand in an expression. It is an error if the constant value cannot be represented as a value of the respective type. If the type is a type parameter, the constant is converted into a non-constant value of the type parameter.</p>
+<p>A constant may be given a type explicitly by a <a href="#constant-declarations-%E5%B8%B8%E9%87%8F%E5%A3%B0%E6%98%8E">constant declaration</a> or <a href="#conversions-%E8%BD%AC%E6%8D%A2">conversion</a>, or implicitly when used in a <a href="#variable-declarations-%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E">variable declaration</a> or an <a href="#assignment-statements-%E8%B5%8B%E5%80%BC%E8%AF%AD%E5%8F%A5">assignment statement</a> or as an operand in an <a href="#expressions-%E8%A1%A8%E8%BE%BE%E5%BC%8F">expression</a>. It is an error if the constant value cannot be <a href="#representability-%E5%8F%AF%E8%A1%A8%E7%A4%BA%E6%80%A7">represented</a> as a value of the respective type. If the type is a type parameter, the constant is converted into a non-constant value of the type parameter.</p>
 </blockquote>
 <p>常量可以通过常量声明或转换来显式地给定类型，或者在变量声明或赋值语句中使用，或者作为表达式中的操作数时隐式地指定类型。<br/>
 如果常量值不能表示为相应类型的值，那么就会产生一个错误。<br/>
 如果类型是一个类型参数，那么常量就会转换为类型参数的非常量值。</p>
 <blockquote>
-<p>An untyped constant has a default type which is the type to which the constant is implicitly converted in contexts where a typed value is required, for instance, in a short variable declaration such as i := 0 where there is no explicit type. The default type of an untyped constant is bool, rune, int, float64, complex128 or string respectively, depending on whether it is a boolean, rune, integer, floating-point, complex, or string constant.</p>
+<p>An untyped constant has a default type which is the type to which the constant is implicitly converted in contexts where a typed value is required, for instance, in a <a href="#short-variable-declarations-%E7%9F%AD%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E">short variable declaration</a> such as i := 0 where there is no explicit type. The default type of an untyped constant is bool, rune, int, float64, complex128 or string respectively, depending on whether it is a boolean, rune, integer, floating-point, complex, or string constant.</p>
 </blockquote>
 <p>无类型常量具有默认类型，该类型是常量在需要有类型值的上下文中隐式转换的目标类型，比如，在没有显式类型的短变量声明如 <code>i := 0</code> 中。<br/>
 无类型常量的默认类型为 bool, rune, int, float64, complex128 或 string ，这分别取决于它是布尔、 Unicode 字符、整数、浮点、复数还是字符串常量。</p>
@@ -862,7 +862,7 @@ Unicode 字符常量、整数常量、浮点常量和复数常量统称为数字
 </blockquote>
 <p>由于精度限制而无法表示浮点或复数常量时，就舍入到最接近的可表示的常量。</p>
 <blockquote>
-<p>These requirements apply both to literal constants and to the result of evaluating constant expressions.</p>
+<p>These requirements apply both to literal constants and to the result of evaluating <a href="#constant-expressions-%E5%B8%B8%E9%87%8F%E8%A1%A8%E8%BE%BE%E5%BC%8F">constant expression</a><a href="#constant-expressions-%E5%B8%B8%E9%87%8F%E8%A1%A8%E8%BE%BE%E5%BC%8F">constant expression</a>.</p>
 </blockquote>
 <p>这些要求既对字面量常量适用，对常量表达式的计算结果也适用。</p>
 <h2 id="variables-变量">Variables 变量</h2>
