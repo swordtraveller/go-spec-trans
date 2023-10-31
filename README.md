@@ -1,5 +1,5 @@
 # README
 
-框架：[astro.js](https://astro.build/)  
-主题：[OpenBlog](https://github.com/danielcgilibert/blog-template)  
+框架：[vitepress](https://vitepress.dev/)  
+主题：默认  
 译文内容版权归本人所有。  
