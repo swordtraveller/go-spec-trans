@@ -842,7 +842,7 @@ import{_ as s,o as e,c as n,Q as a}from"./chunks/framework.86f4d776.js";const b=
 <span class="line"><span style="color:#24292e;">	Read([]byte) (int, error)</span></span>
 <span class="line"><span style="color:#24292e;">	Write([]byte) (int, error)</span></span>
 <span class="line"><span style="color:#24292e;">	Close() error</span></span>
-<span class="line"><span style="color:#24292e;">}</span></span></code></pre></div><blockquote><p>The name of each explicitly specified method must be unique and not blank.</p></blockquote><p>每个显式指定的方法名必须唯一的且不为空。</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">interface {</span></span>
+<span class="line"><span style="color:#24292e;">}</span></span></code></pre></div><blockquote><p>The name of each explicitly specified method must be unique and not blank.</p></blockquote><p>每个显式指定的方法名必须唯一且不为空。</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">interface {</span></span>
 <span class="line"><span style="color:#e1e4e8;">	String() string</span></span>
 <span class="line"><span style="color:#e1e4e8;">	String() string  // illegal: String not unique</span></span>
 <span class="line"><span style="color:#e1e4e8;">	_(x int)         // illegal: method must have non-blank name</span></span>
@@ -850,7 +850,7 @@ import{_ as s,o as e,c as n,Q as a}from"./chunks/framework.86f4d776.js";const b=
 <span class="line"><span style="color:#24292e;">	String() string</span></span>
 <span class="line"><span style="color:#24292e;">	String() string  // illegal: String not unique</span></span>
 <span class="line"><span style="color:#24292e;">	_(x int)         // illegal: method must have non-blank name</span></span>
-<span class="line"><span style="color:#24292e;">}</span></span></code></pre></div><blockquote><p>More than one type may implement an interface. For instance, if two types S1 and S2 have the method set</p></blockquote><p>不止一种类型可以实现一个接口。例如，如果两个类型 S1 和 S2 设置了（如下）方法集</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">func (p T) Read(p []byte) (n int, err error)</span></span>
+<span class="line"><span style="color:#24292e;">}</span></span></code></pre></div><blockquote><p>More than one type may implement an interface. For instance, if two types S1 and S2 have the method set</p></blockquote><p>多个类型可以实现同一个接口。例如，如果两个类型 S1 和 S2 设置了（如下）方法集</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#e1e4e8;">func (p T) Read(p []byte) (n int, err error)</span></span>
 <span class="line"><span style="color:#e1e4e8;">func (p T) Write(p []byte) (n int, err error)</span></span>
 <span class="line"><span style="color:#e1e4e8;">func (p T) Close() error</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292e;">func (p T) Read(p []byte) (n int, err error)</span></span>
 <span class="line"><span style="color:#24292e;">func (p T) Write(p []byte) (n int, err error)</span></span>
